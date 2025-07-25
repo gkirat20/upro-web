@@ -6,8 +6,8 @@ A modern Next.js application built with TypeScript, Supabase authentication, and
 
 ### Prerequisites
 
-- Node.js 18.0 or later
-- npm, yarn, or pnpm package manager
+- [Node.js 18.0 or later](https://nodejs.org/en/download)
+- npm, yarn, or pnpm package manager 
 - A Supabase account
 
 ### Installation
@@ -27,10 +27,6 @@ A modern Next.js application built with TypeScript, Supabase authentication, and
 
    ```bash
    npm install
-   # or
-   yarn install
-   # or
-   pnpm install
    ```
 
 4. **shadcn/ui Setup**
@@ -62,6 +58,24 @@ A modern Next.js application built with TypeScript, Supabase authentication, and
    - Go to Settings > API
    - Copy your Project URL
    - Copy your anon/public key
+  
+4. **Setup schema**
+
+   In your supabase project:
+   
+   - On the left side bar open `SQL Editor`
+   - Click new SQL Snippet
+   - Paste the contents of the [schema](https://raw.githubusercontent.com/BuildersLeague/upro-web/refs/heads/main/supabase_schema.sql)
+   - Click run at the bottom right
+
+6. **Setup database sample data**
+
+   In your supabase project:
+   
+   - On the left side bar open `SQL Editor`
+   - Click new SQL Snippet (or click the new tab button near the `Tab Title`)
+   - Paste the contents of the [seed file](https://raw.githubusercontent.com/BuildersLeague/upro-web/refs/heads/main/seed_data.sql)
+   - Click run at the bottom right
 
 ### Environment Configuration
 
