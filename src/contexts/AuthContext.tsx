@@ -52,7 +52,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 		email: string,
 		password: string,
 		firstName: string,
-		lastName: String
+		lastName: string
 	) => {
 		const { error } = await supabase.auth.signUp({
 			email,
