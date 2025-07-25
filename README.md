@@ -14,13 +14,13 @@ A modern Next.js application built with TypeScript, Supabase authentication, and
 
 1. **Fork the Repository**
 
-   Fork this repository from the original source at `Builder-s-League/builders-web-upro` to your own GitHub account.
+   Fork this repository from the original source at `BuildersLeague/upro-web` to your own GitHub account.
 
 2. **Clone Your Fork**
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/builders-web-upro.git
-   cd builders-web-upro
+   git clone https://github.com/YOUR_USERNAME/upro-web.git
+   cd upro-web
    ```
 
 3. **Install Dependencies**
