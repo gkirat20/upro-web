@@ -7,7 +7,7 @@ A modern Next.js application built with TypeScript, Supabase authentication, and
 ### Prerequisites
 
 - [Node.js 18.0 or later](https://nodejs.org/en/download)
-- npm, yarn, or pnpm package manager 
+- npm, yarn, or pnpm package manager
 - A Supabase account
 
 ### Installation
@@ -44,7 +44,6 @@ A modern Next.js application built with TypeScript, Supabase authentication, and
    Visit [supabase.com](https://supabase.com) and create a free account.
 
 2. **Create a New Project**
-
    - Click "New Project"
    - Choose your organization
    - Enter a project name
@@ -54,24 +53,21 @@ A modern Next.js application built with TypeScript, Supabase authentication, and
 3. **Get Your Environment Variables**
 
    Navigate to your project settings:
-
    - Go to Settings > API
    - Copy your Project URL
    - Copy your anon/public key
-  
+
 4. **Setup schema**
 
    In your supabase project:
-   
    - On the left side bar open `SQL Editor`
    - Click new SQL Snippet
    - Paste the contents of the [schema](https://raw.githubusercontent.com/BuildersLeague/upro-web/refs/heads/main/supabase_schema.sql)
    - Click run at the bottom right
 
-6. **Setup database sample data**
+5. **Setup database sample data**
 
    In your supabase project:
-   
    - On the left side bar open `SQL Editor`
    - Click new SQL Snippet (or click the new tab button near the `Tab Title`)
    - Paste the contents of the [seed file](https://raw.githubusercontent.com/BuildersLeague/upro-web/refs/heads/main/seed_data.sql)
@@ -183,6 +179,9 @@ src/
 - **ESLint** - Code linting
 - **@eslint/eslintrc** - ESLint configuration
 - **eslint-config-next** - Next.js specific ESLint rules
+- **Prettier** - Code formatting
+- **Husky** - Git hooks for code quality
+- **lint-staged** - Run linters on staged files
 
 ### Utilities
 
@@ -196,6 +195,38 @@ src/
 - `npm run build` - Build production application
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint code analysis
+- `npm run lint:fix` - Run ESLint and automatically fix issues
+- `npm run format` - Format code with Prettier
+- `npm run format:check` - Check if code is properly formatted
+
+## Code Quality & Git Hooks
+
+This project uses Husky for Git hooks to ensure code quality:
+
+### Pre-commit Hook
+
+- Runs `lint-staged` on staged files
+- Automatically fixes ESLint issues and formats code with Prettier
+- Only processes files that are staged for commit
+
+### Pre-push Hook
+
+- Runs full lint check on the entire codebase
+- Verifies all files are properly formatted
+- Prevents pushing if there are linting errors or formatting issues
+
+### Manual Commands
+
+```bash
+# Format all files
+npm run format
+
+# Check formatting without changing files
+npm run format:check
+
+# Run linting and fix issues
+npm run lint:fix
+```
 
 ## Authentication Flow
 
