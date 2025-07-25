@@ -83,7 +83,7 @@ CREATE TABLE clubs (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Profiles will be associated to the clubs
+-- Users will be associated to the clubs
 CREATE TABLE club_members (
     id SERIAL PRIMARY KEY,
     user_id INTEGER NOT NULL,
