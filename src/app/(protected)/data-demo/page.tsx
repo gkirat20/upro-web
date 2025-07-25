@@ -29,7 +29,7 @@ export default function DataDemoPage() {
 
   const handleRefetch = async () => {
     await refetch();
-    setRefetchCount((prev) => prev + 1);
+    setRefetchCount(prev => prev + 1);
   };
 
   return (
@@ -61,8 +61,8 @@ export default function DataDemoPage() {
                     isLoading
                       ? "text-blue-600"
                       : isError
-                      ? "text-red-600"
-                      : "text-green-600"
+                        ? "text-red-600"
+                        : "text-green-600"
                   }`}
                 >
                   {isLoading ? "Loading..." : isError ? "Error" : "Success"}

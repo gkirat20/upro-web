@@ -29,7 +29,7 @@ export function useUpdateUserProfile() {
   return useMutation({
     mutationFn: (updates: Partial<UserProfile>) =>
       api.updateUserProfile(user!.id, updates),
-    onSuccess: (data) => {
+    onSuccess: data => {
       // Update the cache with the new data
       queryClient.setQueryData(queryKeys.userProfile(user!.id), data);
       // Or invalidate to refetch

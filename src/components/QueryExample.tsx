@@ -39,7 +39,7 @@ export function QueryExample() {
             <p className="text-sm text-muted-foreground mb-3">
               Latest posts from external API:
             </p>
-            {data?.slice(0, 2).map((post) => (
+            {data?.slice(0, 2).map(post => (
               <div key={post.id} className="border-l-2 border-blue-500 pl-3">
                 <h4 className="font-medium text-sm">{post.title}</h4>
                 <p className="text-xs text-muted-foreground">
