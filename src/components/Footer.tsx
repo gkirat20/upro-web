@@ -155,6 +155,9 @@ export function Footer() {
           </div>
         </div>
       </div>
+      <div className="text-center text-sm text-[#e6fbe6] mt-10">
+        <p>Don&apos;t have an account?</p>
+      </div>
     </footer>
   );
 }
